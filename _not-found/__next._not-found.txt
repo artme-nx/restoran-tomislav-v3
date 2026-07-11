@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[39756,["/restoran-tomislav-v3/_next/static/chunks/42_x8oh3-zycv.js","/restoran-tomislav-v3/_next/static/chunks/0sj4-wgrqamsj.js","/restoran-tomislav-v3/_next/static/chunks/158myu8e_yme3.js"],"default"]
+3:I[37457,["/restoran-tomislav-v3/_next/static/chunks/42_x8oh3-zycv.js","/restoran-tomislav-v3/_next/static/chunks/0sj4-wgrqamsj.js","/restoran-tomislav-v3/_next/static/chunks/158myu8e_yme3.js"],"default"]
+4:[]
+0:{"rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"isPartial":false,"staleTime":300,"varyParams":"$W4","buildId":"aZgWWhh39bnoLMAy96L0W"}
