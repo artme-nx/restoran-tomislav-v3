@@ -1,0 +1,150 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "./tokens.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--type-body);
+  --font-mono: var(--type-label);
+  --font-heading: var(--type-display);
+  --font-display: var(--type-display);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-wax: var(--wax);
+  --color-wax-dim: var(--wax-dim);
+  --color-adriatic: var(--adriatic);
+  --ease-reveal: var(--ease-reveal);
+  --ease-stamp: var(--ease-stamp);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  /* Sidebar aliases kept for shadcn components; values come from tokens.css */
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--card-foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    color-scheme: light;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  ::selection {
+    background: var(--wax);
+    color: var(--card);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--type-display);
+  }
+  .text-label {
+    font-family: var(--type-label);
+    font-size: 0.7rem;
+    letter-spacing: var(--tracking-label);
+    text-transform: uppercase;
+  }
+
+  /* Parchment paper texture: layered grain + subtle fiber lines, no image assets */
+  .bg-parchment-texture {
+    background-image:
+      var(--charter-grain),
+      repeating-linear-gradient(
+        95deg,
+        rgba(60, 48, 32, 0.025) 0px,
+        rgba(60, 48, 32, 0.025) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+    background-color: var(--background);
+  }
+
+  .bg-parchment-card {
+    background-image: var(--charter-grain);
+    background-color: var(--card);
+  }
+
+  /* Deckle (torn paper) edge, drawn with a repeating conic gradient mask */
+  .deckle-edge-bottom {
+    -webkit-mask-image: linear-gradient(to bottom, black calc(100% - 10px), transparent 100%),
+      repeating-linear-gradient(
+        90deg,
+        black 0px,
+        black 7px,
+        transparent 7px,
+        transparent 14px
+      );
+    -webkit-mask-position: 0 0, 0 100%;
+    -webkit-mask-size: 100% 100%, 100% 10px;
+    -webkit-mask-repeat: no-repeat, repeat-x;
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to bottom, black calc(100% - 10px), transparent 100%),
+      repeating-linear-gradient(
+        90deg,
+        black 0px,
+        black 7px,
+        transparent 7px,
+        transparent 14px
+      );
+    mask-position: 0 0, 0 100%;
+    mask-size: 100% 100%, 100% 10px;
+    mask-repeat: no-repeat, repeat-x;
+    mask-composite: intersect;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

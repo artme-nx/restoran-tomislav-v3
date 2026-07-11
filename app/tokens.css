@@ -1,0 +1,83 @@
+/* Design Tokens - Auto-generated */
+/* Do not edit directly - modify tokens.json instead */
+
+/* === PRIMITIVES === */
+:root {
+  --primitive-color-parchment-50: #FBF6EA;
+  --primitive-color-parchment-100: #F3E8D0;
+  --primitive-color-parchment-300: #E3CFA4;
+  --primitive-color-parchment-500: #C7A874;
+  --primitive-color-parchment-700: #8C6B3F;
+  --primitive-color-ink-500: #5B4A32;
+  --primitive-color-ink-700: #3C3020;
+  --primitive-color-ink-900: #241A0F;
+  --primitive-color-adriatic-300: #4C8A94;
+  --primitive-color-adriatic-500: #1E5C69;
+  --primitive-color-adriatic-700: #123C45;
+  --primitive-color-wax-300: #C25A3D;
+  --primitive-color-wax-500: #A13820;
+  --primitive-color-wax-700: #712616;
+  --primitive-font-display: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --primitive-font-serif: var(--font-eb-garamond), 'EB Garamond', Georgia, serif;
+  --primitive-font-mono: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  --primitive-motion-duration-micro: 180ms;
+  --primitive-motion-duration-base: 320ms;
+  --primitive-motion-duration-unfurl: 1.4s;
+  --primitive-motion-duration-stamp: 0.7s;
+  --primitive-motion-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --primitive-motion-ease-stamp: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --primitive-tracking-display: 0.01em;
+  --primitive-tracking-label: 0.22em;
+}
+
+/* === SEMANTIC === */
+:root {
+  --background: #F3E8D0;
+  --foreground: #241A0F;
+  --card: #FBF6EA;
+  --card-foreground: #241A0F;
+  --popover: #FBF6EA;
+  --popover-foreground: #241A0F;
+  --primary: #A13820;
+  --primary-foreground: #FBF6EA;
+  --secondary: #1E5C69;
+  --secondary-foreground: #FBF6EA;
+  --muted: #E3CFA4;
+  --muted-foreground: #5B4A32;
+  --accent: #1E5C69;
+  --accent-foreground: #FBF6EA;
+  --destructive: #712616;
+  --border: #C7A874;
+  --input: #C7A874;
+  --ring: #A13820;
+  --radius: 0.125rem;
+  --wax: #A13820;
+  --wax-dim: #712616;
+  --adriatic: #1E5C69;
+  --surface-line: #C7A874;
+  --type-display: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --type-body: var(--font-eb-garamond), 'EB Garamond', Georgia, serif;
+  --type-label: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-stamp: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-micro: 180ms;
+  --duration-base: 320ms;
+  --duration-unfurl: 1.4s;
+  --duration-stamp: 0.7s;
+  --tracking-display: 0.01em;
+  --tracking-label: 0.22em;
+}
+
+/* === COMPONENTS === */
+:root {
+  --charter-spine-width: clamp(3px, 0.6vw, 6px);
+  --charter-seal-size: clamp(4.5rem, 9vw, 7rem);
+  --charter-grain: radial-gradient(circle at 20% 30%, rgba(140, 107, 63, 0.08), transparent 45%), radial-gradient(circle at 80% 70%, rgba(140, 107, 63, 0.07), transparent 50%), radial-gradient(circle at 50% 95%, rgba(30, 92, 105, 0.05), transparent 60%);
+  --charter-vignette: linear-gradient(to bottom, rgba(36, 26, 15, 0.10), transparent 18%, transparent 82%, rgba(36, 26, 15, 0.12) 100%);
+  --button-primary-bg: #A13820;
+  --button-primary-fg: #FBF6EA;
+  --button-primary-hover-bg: #712616;
+  --button-primary-hover-fg: #FBF6EA;
+  --button-ghost-border: #8C6B3F;
+  --button-ghost-hover-border: #1E5C69;
+}
